@@ -1,6 +1,7 @@
 import './App.css';
 import React, {Component} from 'react';
 import Navbar from './Components/Layout/Navbar';
+import UserItem from './Components/Users/UserItems';
 
 class App extends Component {
   constructor(){
@@ -9,9 +10,8 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Navbar 
-        title="Github Finder" 
-        icon="fab fa-github"/> 
+        <Navbar /> 
+        <UserItem/>
       </div>
     );
 
