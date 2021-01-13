@@ -1,7 +1,7 @@
 import './App.css';
 import React, {Component} from 'react';
 import Navbar from './Components/Layout/Navbar';
-import UserItem from './Components/Users/UserItems';
+import Users from './Components/Users/Users';
 
 class App extends Component {
   constructor(){
@@ -11,7 +11,9 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar /> 
-        <UserItem/>
+        <div className="container"> 
+        <Users/></div>
+       
       </div>
     );
 

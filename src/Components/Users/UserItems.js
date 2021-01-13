@@ -1,18 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class UserItems extends Component {
-  constructor(){
-    super()
-
-    this.state= {
-      id: 'id',
-      login: 'angelika',
-      avatar_url: 'http://google.com',
-      html_url: 'https://github.com/'
-    }
-  }
-  render() {
-    const {login, avatar_url, html_url} = this.state;
+const UserItems = (props) => {
+    const {login, avatar_url, html_url} = props.user;
     return (
       <div className='card text-center'>
         <img 
@@ -25,7 +14,7 @@ class UserItems extends Component {
         </div>
       </div>
     )
-  }
+  
 }
 
 export default UserItems
