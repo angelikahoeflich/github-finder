@@ -40,7 +40,7 @@ const User = ({user, loading, getUser, getUserRepos, repos, match}) =>  {
           <div className="all-center">
             <img src={avatar_url} className="round-img" style={{width: '130px'}}alt="profile"/>
             <h1>{name}</h1>
-            <p>Location:{location}</p>
+            <p>Location: {location}</p>
           </div>
           <div>
             {bio && <Fragment>
