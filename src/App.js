@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState, Fragment} from 'react';
+import React, { Fragment} from 'react';
 import Navbar from './Components/Layout/Navbar';
 import Users from './Components/Users/Users';
 import User from './Components/Users/User';
@@ -8,31 +8,23 @@ import Alert from './Components/Layout/Alert';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import About from './Components/Pages/About';
 import GitHubState from './context/github/GithubState';
+import AlertState from './context/alert/AlertState';
 
 
 const App = () =>  {
-  const [alert, setAlert] = useState(null);
-
-
-  // Set alert
- const showAlert = (msg, type) => {
-    setAlert({msg, type})
-    setTimeout(() => setAlert(null), 5000)
-  }
-
 
     return (
       <GitHubState>
+      <AlertState>
       <Router>
       <div className="App">
         <Navbar /> 
         <div className="container"> 
-          <Alert alert={alert}/>
+          <Alert />
           <Switch>
             <Route exact path='/' render={props => (
               <Fragment>
                   <Search 
-          setAlert={showAlert}
           />
           <Users />
               </Fragment>
@@ -47,6 +39,7 @@ const App = () =>  {
        
       </div>
       </Router>
+      </AlertState>
       </GitHubState>
     );
 
