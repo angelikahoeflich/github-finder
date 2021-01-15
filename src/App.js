@@ -8,6 +8,7 @@ import Search from './Components/Users/Search';
 import Alert from './Components/Layout/Alert';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import About from './Components/Pages/About';
+import GitHubState from './context/github/GithubState';
 
 
 const App = () =>  {
@@ -68,6 +69,7 @@ const App = () =>  {
 
 
     return (
+      <GitHubState>
       <Router>
       <div className="App">
         <Navbar /> 
@@ -104,6 +106,7 @@ const App = () =>  {
        
       </div>
       </Router>
+      </GitHubState>
     );
 
   
